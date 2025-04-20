@@ -49,10 +49,11 @@
 
 ### Transceivers
 | Name     | Frequency Range   | Datasheet |
-| -        | -                 | -         |
-| LMS6002D | | |
-| LMS7002M |  10 MHz - 3.5 GHz | |
-| LMS8001A Up/Down converter | 0.8 - 10 GHz | https://github.com/myriadrf/LMS8001-docs/blob/master/LMS8001A-Datasheet%204.0r5.pdf |
-| AD9361   |  70 MHz - 6 GHz   | https://www.analog.com/en/products/ad9361.html |
-| AD9363   | 325 MHz - 3.8 GHz | https://www.analog.com/en/products/ad9363.html |
-| AD9364   |  70 MHz - 6 GHz   | https://www.analog.com/en/products/ad9364.html |
+| -        | -                 | :-:       |
+| LMS6002D |                   |           |
+| LMS7002M |  10 MHz - 3.5 GHz |           |
+| LMS8001A Up/Down converter | 0.8 - 10 GHz | [https://github.com/myriadrf/LMS8001-docs/blob/master/LMS8001A-Datasheet%204.0r5.pdf](https://github.com/myriadrf/LMS8001-docs/blob/master/LMS8001A-Datasheet%204.0r5.pdf 'LMS8001A Datasheet') |
+| AD9361   |  70 MHz - 6 GHz   | [https://www.analog.com/en/products/ad9361.html](https://www.analog.com/en/products/ad9361.html 'AD9361 Datasheet') |
+| AD9363   | 325 MHz - 3.8 GHz | [https://www.analog.com/en/products/ad9363.html](https://www.analog.com/en/products/ad9363.html 'AD9363 Datasheet') |
+| AD9364   |  70 MHz - 6 GHz   | [https://www.analog.com/en/products/ad9364.html](https://www.analog.com/en/products/ad9364.html 'AD9364 Datasheet') |
+

@@ -1,5 +1,19 @@
 # SDR
 
+## Hardware Sweet Spot
+(Apr 2025)
+```
+                /--> 6 Gbit interface  ------------> USB 3.0 CYUSB3014-BZX
+                |
+                |--> 70 MHz - 6 GHz Transceiver  --> AD9361/AD9364
+[ Desired ]-----|
+                |--> Sample Rate 61.44 MSPS
+                |
+                \--> FPGA compatible with UHD  ----> Xilinx Spartan-6
+                     (USRP Hardware Driver™)            XC6SLX75
+                                                        XC6SLX150
+```
+
 ## Devices
 
 ### Available
@@ -32,7 +46,7 @@
 | CBTS U210-mini (B205mini clone) $1,000 | USB 3.0 | 5 Gbits      | ?                    | Xilinx Spartan-6 XC6SLX150  | AD9361 ?        | 61.44 MSPS 12bit ?      |                     | 70 MHz - 6 GHz    |                 | [Shop page](https://www.aliexpress.com/item/4000170698563.html)     | |
 | Neptune SDR K210 (Pluto clone better FPGA + Eth) $350 | Ethernet | 1 Gbit | FT2232     | Xilinx Zynq XC7Z020 1GByte  | AD9361          | 25 MPS                  |                     | 70 MHz - 6 GHz    | ?               | [Shop page](https://www.aliexpress.com/item/1005007995977956.html)  | |
 
-### Work in progress / Sold out
+### Work in progress
 | Name                             | Interface  | Interface Speed | Interface Controller | FPGA                        | Transceiver     | Sample rate (sustained) | Sample rate (burst) | RF Coverage       | RF Bandwidth    | Project page | Block diagram |
 | -                                | -          | -               | -                    | -                           | -               | -                       | -                   | -                 | -               | :-:          | :-:           |
 | Wavelet Lab sSDR                 | PCIe Gen2 x2 lanes M.2 | 10 Gbits | SoC             | AMD Artix 7 XC7A35T         | LMS7002M + LMS8001A | 100 MSps ?          | ?                   | 30 MHz - 8.5 GHz RX/TX | 90 MHz     |  | [Block diagram](https://www.crowdsupply.com/img/9bfc/e0724489-2123-4f79-be66-b8161e8f9bfc/susdr-sch-lg_jpg_gallery-lg.jpg) |

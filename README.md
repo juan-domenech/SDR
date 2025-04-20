@@ -35,7 +35,9 @@
 | LibreSDR (Pluto clone) $300      | USB 2.0 + Ethernet 1Gbit | 480 Mbits + 1 Gbit | FT2232HQ + USB3320C-EZK-TR ? + RTL8211E-VB | Xilinx Zynq XC7Z020-1CLG400I | AD9363 | ?    | ?       | 325 MHz - 3.8 GHz | ?               | [Shop page](https://www.aliexpress.com/item/1005004916987318.html)  | [Block diagram](https://github.com/day0wl/libresdr-fw/tree/main) |
 | LibreSDR (B210 clone)  $300      | USB 3.0    | 5 Gbits         | CYUSB3014 ?          | Xilinx Artix 7 XC7A100T     | AD9363          | 61.44 MSPS 12 bit ?     |                     | 325 MHz - 3.8 GHz | 56 MHz          | [Shop page](https://www.aliexpress.com/item/1005008177145326.html ) | |
 | LibreSDR (B220 clone)  $350      | USB 3.0    | 5 Gbits         | CYUSB3014 ?          | Xilinx Artix 7 XC7A200T     | AD9361          | 61.44 MSPS 12 bit       |                     | 70 MHz - 6 GHz    | 56 MHz          | [Shop page](https://www.aliexpress.com/item/1005008177145326.html ) | |
-| B205 clone $1,000                | USB 3.0    | 5 Gbits         | ?                    | Spartan-6 ?                 | ?               | ?                       |                     | 70 MHz - 6 GHz    | ?               | [Shop page](https://www.aliexpress.com/item/1005008525068995.html)  | |
+| SC-B210 (B205 clone) $1,000      | USB 3.0    | 5 Gbits         | ?                    | Xilinx Spartan-6 ?          | ?               | ?                       |                     | 70 MHz - 6 GHz    | ?               | [Shop page](https://www.aliexpress.com/item/1005008525068995.html)  | |
+| CBTS U210-mini (B205mini clone) $1,000 | USB 3.0 | 5 Gbits      | ?                    | Xilinx Spartan-6 XC6SLX150  | AD9361 ?        | 61.44 MSPS 12 bit ?     |                     | 70 MHz - 6 GHz    |                 | [Shop page](https://www.aliexpress.com/item/4000170698563.html)     | |
+
 
 - (1) Overclock 122.88MSPS https://www.nuand.com/2023-02-release-122-88mhz-bandwidth/
 - (2) GNUradio "20 MHz limited by USB 2.0 and software to ~4Mhz" https://wiki.gnuradio.org/index.php/Hardware

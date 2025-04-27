@@ -1,4 +1,4 @@
-# SDR
+# Software Defined Radio (SDR) Platforms and Devices
 
 ## Hardware Sweet Spot
 (Apr 2025)
@@ -31,6 +31,9 @@
 | Ettus USRP B210                  | USB 3.0    | 5 Gbits         | CYUSB3014-BZX        | Xilinx Spartan-6 XC6SLX150  | AD9361          | 61.44 MSPS ?            |                     | 70 MHz - 6 GHz    | 61.44 MHz ?     | Y  |  | [Block diagram](https://www.amazon.co.uk/Ettus-USRP-B210-MHz-6-cognitive/dp/B09B7DFQ89?ref_=ast_sto_dp) |
 | Ettus USRP N320                  | Ethernet 10 GbE SFP+ x2 | 10 Gbits x2 | SoC         | Xilinx Zynq XC7Z100 SoC     | ?               | ??? 14bit ADC 16bit DAC |                     | 3 MHz - 6 GHz     | 200 MHz         | Y  | [Project page](https://www.ettus.com/all-products/usrp-n320/) | [Block diagram](https://www.ettus.com/wp-content/uploads/2019/03/N320BlockDiagram.png) |
 
+- (1) Overclock 122.88MSPS https://www.nuand.com/2023-02-release-122-88mhz-bandwidth/
+- (2) GNUradio "20 MHz limited by USB 2.0 and software to ~4Mhz" https://wiki.gnuradio.org/index.php/Hardware
+
 ### Pluto like
 | Name                             | Interface  | Interface Speed | Interface Controller | FPGA                        | Transceiver     | Sample rate (sustained) | Sample rate (burst) | RF Coverage       | RF Bandwidth    | x2 | Project page | Block diagram |
 | -                                | -          | -               | -                    | -                           | -               | -                       | -                   | -                 | -               |:-: | :-:          | :-:           |
@@ -41,6 +44,8 @@
 | LibreSDR (better FPGA + Eth) $300| USB 2.0 + Ethernet 1Gbit | 480 Mbits + 1 Gbit | FT2232HQ + USB3320C-EZK-TR ? + RTL8211E-VB | Xilinx Zynq XC7Z020-1CLG400I | AD9363 | ?    | ?       | 325 MHz - 3.8 GHz | ?               | Y  | [Shop page](https://www.aliexpress.com/item/1005004916987318.html) | [Block diagram](https://github.com/day0wl/libresdr-fw/tree/main) |
 | Neptune SDR K210 (better FPGA + Eth) $350 | Ethernet | 1 Gbit   | FT2232               | Xilinx Zynq XC7Z020 1GByte  | AD9361          | 25 MPS                  |                     | 70 MHz - 6 GHz    | ?               | Y  | [Shop page](https://www.aliexpress.com/item/1005007995977956.html) | |
 | Signalens SignalSDR Pro          | USB 3.0 (3)| 5 Gbits         | SoC                  | Xilinx Zynq XC7Z020 2CLG400 SoC| AD9361       | 61.44 MSPS 12bit        |                     | 70 MHz - 6 GHz    | 56 MHz          | Y  | [Project page](https://www.crowdsupply.com/signalens/signalsdr-pro) | [Block diagram](https://www.crowdsupply.com/img/1039/50daf1c1-9191-46b1-9b91-c68587751039/signalsdr-pro-block-diagram.svg) |
+
+- (3) Ethernet also available
 
 ### Ettus like
 | Name                             | Interface  | Interface Speed | Interface Controller | FPGA                        | Transceiver     | Sample rate (sustained) | Sample rate (burst) | RF Coverage       | RF Bandwidth    | x2 | Project page | Block diagram |
@@ -59,10 +64,6 @@
 | Red Pitaya                       | Ethernet   | 1 Gbit          | SoC                  | Xilinx Zynq XC7Z010-1CLG400C| ADC LTC2145-14 / DAC AD9767 | 125 MSPS 14bit |                  | DC - 60 MHz       | ?               |  | [Block diagram](https://redpitaya.readthedocs.io/en/latest/developerGuide/hardware/125-14/top.html) |
 | Wavelet Lab sSDR                 | PCIe Gen2 x2 lanes M.2 | 10 Gbits | SoC             | AMD Artix 7 XC7A35T         | LMS7002M + LMS8001A | 100 MSps ?          | ?                   | 30 MHz - 8.5 GHz RX/TX | 90 MHz     |  | [Block diagram](https://www.crowdsupply.com/img/9bfc/e0724489-2123-4f79-be66-b8161e8f9bfc/susdr-sch-lg_jpg_gallery-lg.jpg) |
 | Vesperix Corp. VXSDR-20-160      | Ethernet 10 GbE SFP+   | 10 Gbits | SoC             | Altera Cyclone 10 GX105     | ADC32J45 + DAC37J82 | 160 MSPS ADC 14bit / 160 MSPS DAC 16bit | | 5 - 20 GHz        |                 | [Project page](https://www.crowdsupply.com/vesperix-corporation/vxsdr-20-160) | [Block diagram](https://www.crowdsupply.com/img/8bb1/82c06c38-a9f8-45fa-b36f-3925ea5a8bb1/vxsdr-20-160-block-diagram.svg) |
-
-- (1) Overclock 122.88MSPS https://www.nuand.com/2023-02-release-122-88mhz-bandwidth/
-- (2) GNUradio "20 MHz limited by USB 2.0 and software to ~4Mhz" https://wiki.gnuradio.org/index.php/Hardware
-- (3) Ethernet also available
 
 ## References
 
@@ -86,15 +87,15 @@
 | AD9363   | 325 MHz - 3.8 GHz |                    |           | [https://www.analog.com/en/products/ad9363.html](https://www.analog.com/en/products/ad9363.html 'AD9363 Datasheet') |
 | AD9364   |  70 MHz - 6 GHz   |                    |           | [https://www.analog.com/en/products/ad9364.html](https://www.analog.com/en/products/ad9364.html 'AD9364 Datasheet') |
 
-### FPGA
+### FPGAs
 | Model               | Concept                                     | Approximate Price € |
 | -                   | -                                           | -:    |
 | Zynq XC7Z010        | Dual ARM A9 SoC + Artix-7 FPGA              | 80    |
 | Zynq XC7Z020        | Dual ARM A9 SoC + Artix-7 FPGA              | 150   |
 | Zynq XC7Z100        | Dual ARM A9 SoC + Kintex-7 FPGA             | 4,000 |
 | Zynq XA7Z020        | Dual ARM A9 SoC + Artix-7 FPGA (Automotive) | 150   |
-| Artix 7 XC7A50T     | FPGA                                        | 100   |
 | Artix 7 XC7A35T     | FPGA                                        | 80    |
+| Artix 7 XC7A50T     | FPGA                                        | 100   |
 | Artix 7 XC7A100T    | FPGA                                        | 200   |
 | Artix 7 XC7A200T    | FPGA (Automotive)                           | 400   |
 | Spartan-6 XC6SLX75  | FPGA                                        | 300   |
